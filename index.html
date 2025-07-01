@@ -3,37 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Instagram Grid</title>
+  <title>Instagram Preview</title>
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: #fff;
+      padding: 2rem;
+      background-color: #f9f9f9;
+      font-family: 'Helvetica Neue', sans-serif;
     }
-    .grid {
+
+    .grid-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 10px;
-      padding: 20px;
-      max-width: 900px;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 16px;
+      max-width: 1000px;
       margin: auto;
     }
-    .grid img {
+
+    .grid-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background-color: white;
+    }
+
+    .grid-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .grid-item img {
       width: 100%;
       height: auto;
-      border-radius: 10px;
-      object-fit: cover;
+      display: block;
+      border-radius: 16px;
+    }
+
+    .caption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      color: #fff;
+      padding: 8px 12px;
+      font-size: 0.9rem;
+      backdrop-filter: blur(4px);
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
     }
   </style>
 </head>
 <body>
-  <div class="grid">
-    <img src="https://via.placeholder.com/300/ff7f7f" alt="Post 1">
-    <img src="https://via.placeholder.com/300/7fbfff" alt="Post 2">
-    <img src="https://via.placeholder.com/300/ffd27f" alt="Post 3">
-    <img src="https://via.placeholder.com/300/7fffbf" alt="Post 4">
-    <img src="https://via.placeholder.com/300/dc7fff" alt="Post 5">
-    <img src="https://via.placeholder.com/300/ff7faf" alt="Post 6">
+  <h2 style="text-align:center; margin-bottom: 2rem;">Instagram Content Preview</h2>
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="https://via.placeholder.com/400/FFB6C1/000?text=Post+1" alt="Post 1" />
+      <div class="caption">Summer Vibes 🌞</div>
+    </div>
+    <div class="grid-item">
+      <img src="https://via.placeholder.com/400/87CEEB/000?text=Post+2" alt="Post 2" />
+      <div class="caption">Behind the Scenes 🎬</div>
+    </div>
+    <div class="grid-item">
+      <img src="https://via.placeholder.com/400/98FB98/000?text=Post+3" alt="Post 3" />
+      <div class="caption">New Drop Coming 🔥</div>
+    </div>
+    <div class="grid-item">
+      <img src="https://via.placeholder.com/400/DDA0DD/000?text=Post+4" alt="Post 4" />
+      <div class="caption">Client Love 💬</div>
+    </div>
+    <div class="grid-item">
+      <img src="https://via.placeholder.com/400/FFE4B5/000?text=Post+5" alt="Post 5" />
+      <div class="caption">Tips & Tricks 🧠</div>
+    </div>
+    <div class="grid-item">
+      <img src="https://via.placeholder.com/400/ADD8E6/000?text=Post+6" alt="Post 6" />
+      <div class="caption">Before & After ✨</div>
+    </div>
   </div>
 </body>
 </html>
