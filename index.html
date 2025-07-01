@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram Grid</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #fff;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid">
+    <img src="https://via.placeholder.com/300/ff7f7f" alt="Post 1">
+    <img src="https://via.placeholder.com/300/7fbfff" alt="Post 2">
+    <img src="https://via.placeholder.com/300/ffd27f" alt="Post 3">
+    <img src="https://via.placeholder.com/300/7fffbf" alt="Post 4">
+    <img src="https://via.placeholder.com/300/dc7fff" alt="Post 5">
+    <img src="https://via.placeholder.com/300/ff7faf" alt="Post 6">
+  </div>
+</body>
+</html>
